@@ -2,7 +2,7 @@
 
 NUMBER=$1
 
-if [ $UMBER -gt ] # gt,lt,ne,eq, ge etc...
+if [ $UMBER -gt 20 ] # gt,lt,ne,eq, ge etc...
 then 
     echo "Given number is :$NUMBER is grater than 20"
 else
