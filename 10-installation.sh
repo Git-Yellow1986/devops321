@@ -11,7 +11,7 @@ fi
  if [ $? -ne 0 ]
  then 
     echo " Git is installed .... going to install it"
-    dnf install nginx -y
+    dnf install git -y
 if [ $? -ne 0 ]
 then 
     echo " Git installation is not success ...check it"
