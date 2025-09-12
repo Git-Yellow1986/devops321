@@ -9,7 +9,7 @@ USERID=$(id -u) # id -u is give the root id
             exit 1 
         else
             echo "$2 is ....SUCCESS"
-        if
+        fi
     }
 
 if [ $USERID -ne 0 ]
@@ -19,6 +19,7 @@ then
 fi
 
  dnf list installed git
+
  VALIDATE $? "Listing Git"
 
 #  if [ $? -ne 0 ]
