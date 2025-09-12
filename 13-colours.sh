@@ -1,0 +1,53 @@
+USERID=$(id -u) # id -u is give the root id 
+    R="\e[31m" # This is color code
+    G="\e[32m"
+    N="\e[0m"
+
+    CHECK_ROOT() {
+        if [ $USERID -ne 0 ]
+        then
+        echo "Please run this scrip root privelege"
+        exit 1
+        fi
+    }
+    
+    VALIDATE(){
+        # echo "exit status: $1"
+        if [ $1 -ne 0 ]
+        then 
+            echo -e "$2 is ....$R FAILURE $N" # here $N is Normal
+            exit 1 
+        else
+            echo -e "$2 is ....$G SUCCESS $N"
+        fi
+    }
+
+    CHECK_ROOT
+
+ dnf list installed git
+
+# VALIDATE $? "Listing Git"
+
+ if [ $? -ne 0 ]
+ then 
+    echo " Git is installed .... going to install it"
+    dnf install git -y
+  VALIDATE $? "Installing Git"
+
+else 
+    echo "Git is aleady installed , nothing to do "
+fi
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]
+then 
+    echo " Mysql sql is not installed ..... goin to to install"
+    dnf install mysql -y
+    
+   VALIDATE $? "Installing Mysql"
+else
+    echo "Mysql is aleady installed .... nothing to do"
+fi
+
+
