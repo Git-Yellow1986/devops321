@@ -10,8 +10,8 @@ USERID=$(id -u) # id -u is give the root id
         else
             echo "$2 is ....SUCCESS"
         if
-
     }
+
 if [ $USERID -ne 0 ]
 then
     echo "Please run this scrip root privelege"
