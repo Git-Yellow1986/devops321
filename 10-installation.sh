@@ -8,4 +8,20 @@ fi
  dnf list installed nginx
  #dnf install nginx -y
 
+ if [ $? -ne 0 ]
+ then 
+    echo " Git is installed .... going to install it"
+    dnf install nginx -y
+if [ $? -ne 0 ]
+then 
+    echo " Git installation is not success ...check it"
+    exit 1
+    else
+    echo "Git install now"
+
+else 
+    echo "Git is aleady installed , nothing to do "
+fi
+
+
 
