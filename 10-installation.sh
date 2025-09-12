@@ -5,7 +5,7 @@ then
     exit 1
 fi
 
-# dnf list installed git
-dnf install nginx -y
+ dnf list installed nginx
+ #dnf install nginx -y
 
 
