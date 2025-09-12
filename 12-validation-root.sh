@@ -1,6 +1,13 @@
 USERID=$(id -u) # id -u is give the root id 
-    # echo "user ID is : $USERID"
-
+    
+    CHECK_ROOT() {
+        if [ $USERID -ne 0 ]
+        then
+        echo "Please run this scrip root privelege"
+        exit 1
+        fi
+    }
+    
     VALIDATE(){
         # echo "exit status: $1"
         if [ $1 -ne 0 ]
@@ -12,11 +19,7 @@ USERID=$(id -u) # id -u is give the root id
         fi
     }
 
-if [ $USERID -ne 0 ]
-then
-    echo "Please run this scrip root privelege"
-    exit 1
-fi
+    CHECK_ROOT
 
  dnf list installed git
 
