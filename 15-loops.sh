@@ -13,7 +13,7 @@
 USERID=$(id -u)
 R="\e[31m" # color red
 G="\e[32m" # color green
-N="\3[0m"  # color normal
+N="\e[0m"  # color normal
 
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
