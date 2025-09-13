@@ -12,7 +12,7 @@
 
 USERID=$(id -u)
 R="\e[31m" # color red
-G="\3[32m" # color green
+G="\e[32m" # color green
 N="\3[0m"  # color normal
 
 CHECK_ROOT(){
