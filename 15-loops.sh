@@ -7,5 +7,5 @@
 
 for i in {0..20}
 do
-    $i
+   echo $i
 done
