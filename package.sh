@@ -10,7 +10,7 @@ CHECK_ROOT() {
         exit 1
     fi
 }
-
+CHECK_ROOT
 
 for packege in $@
 do 
