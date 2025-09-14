@@ -16,7 +16,7 @@ if [ $1 -ne 0 ]
         echo "$2 is ....$2 Failed"
         exit 1
     else
-        echo "$2 is ....$2 2Success"
+        echo "$2 is ....$2 Success"
     fi
 }
 
