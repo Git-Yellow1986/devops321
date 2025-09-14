@@ -20,12 +20,20 @@ then
     echo "$package is not installed ... going to install it..."
     dnf install $package -y
     
-    if [ $1 -ne 0 ]
+    # if [ $1 -ne 0 ]
+    # then 
+    #     echo "$2 is ....$2 Failed"
+    #     exit 1
+    # else
+    #     echo "$2 is ....$ 2Success"
+    # fi
+
+     if [ $1 -ne 0 ]
     then 
-        echo "$2 is ....$2 Failed"
+        echo -e "$2 is ...$2 FAILED $N"
         exit 1
     else
-        echo "$2 is ....$ 2Success"
+        echo -e "$2 is ...$2 SUCCESS $N"
     fi
 
 else
