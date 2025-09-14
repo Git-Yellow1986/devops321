@@ -28,12 +28,12 @@ then
     #     echo "$2 is ....$ 2Success"
     # fi
 
-     if [ $1 -ne 0 ]
+     if [ $? -ne 0 ]
     then 
-        echo -e "$2 is ...$2 FAILED $N"
+        echo -e "$1 is ...$1 FAILED $N"
         exit 1
     else
-        echo -e "$2 is ...$2 SUCCESS $N"
+        echo -e "$1 is ...$1 SUCCESS $N"
     fi
 
 else
