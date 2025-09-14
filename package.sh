@@ -19,6 +19,13 @@ if [ $? -ne 0 ]
 then 
     echo "$package is not installed ... going to install it..."
     dnf install $package -y
+    if [ $1 -ne 0 ]
+    then 
+        echo "$2 is ....Failed"
+        exit 1
+    else
+        echo "$2 is ....Success"
+    fi
 else
     echo "$package is already installed, nothing to do.."
 fi
