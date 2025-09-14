@@ -12,7 +12,7 @@ CHECK_ROOT() {
 }
 CHECK_ROOT
 
-for packege in $@
+for package in $@
 do 
     dnf list installed $package
 if [ $? -ne 0 ]
@@ -20,21 +20,15 @@ then
     echo "$package is not installed ... going to install it..."
     dnf install $package -y
     
-    # if [ $1 -ne 0 ]
-    # then 
-    #     echo "$2 is ....$2 Failed"
-    #     exit 1
-    # else
-    #     echo "$2 is ....$ 2Success"
-    # fi
-
-     if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then 
-        echo -e "$1 is ...$1 FAILED $N"
+        echo "$2 is ....$2 Failed"
         exit 1
     else
-        echo -e "$1 is ...$1 SUCCESS $N"
+        echo "$2 is ....$ 2Success"
     fi
+
+     
 
 else
     echo "$package is already installed, nothing to do.."
