@@ -10,6 +10,16 @@ CHECK_ROOT() {
         exit 1
     fi
 }
+VALIDATE() {
+if [ $1 -ne 0 ]
+    then 
+        echo "$2 is ....$2 Failed"
+        exit 1
+    else
+        echo "$2 is ....$2 2Success"
+    fi
+}
+
 CHECK_ROOT
 
 for package in $@
@@ -19,17 +29,9 @@ if [ $? -ne 0 ]
 then 
     echo "$package is not installed ... going to install it..."
     dnf install $package -y
+  VALIDATE  
     
-    if [ $1 -ne 0 ]
-    then 
-        echo "$2 is ....$2 Failed"
-        exit 1
-    else
-        echo "$2 is ....$ 2Success"
-    fi
-
      
-
 else
     echo "$package is already installed, nothing to do.."
 fi
