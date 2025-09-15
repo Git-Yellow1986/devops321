@@ -78,7 +78,8 @@ do
         VALIDATE $? "installing $package"
     else
        echo -e "$package is aleady $R installed..nothing to do $N"
+       PACKAGES_SUCCESS
     fi
-        PACKAGES_SUCCESS
+        
 
 done
