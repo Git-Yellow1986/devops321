@@ -57,7 +57,7 @@ then
     USAGE
 fi
 PACKAGE_CKECK(){
-       if [ $# -ne 0 ]
+       if [ $# -eq 0 ]
         then 
             echo "$package is done"
         else
