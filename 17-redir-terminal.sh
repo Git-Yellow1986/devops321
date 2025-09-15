@@ -60,9 +60,9 @@ fi
 PACKAGES_SUCCESS(){
     if [ $# -eq 0 ]
     then
-    echo -e "$Y $2 are SUCCESSFULLY installed $N"
+    echo -e "$Y All package are SUCCESSFULLY installed $N"
     else
-    echo -e "$R $1 Packages Installation Failure $N"
+    echo -e "$R  Packages Installation Failure $N"
     exit 1
     fi
 }
@@ -78,7 +78,8 @@ do
         VALIDATE $? "installing $package"
     else
        echo -e "$package is aleady $R installed..nothing to do $N"
-       PACKAGES_SUCCESS
+                PACKAGES_SUCCESS
+
     fi
         
 
