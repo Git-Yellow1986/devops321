@@ -56,14 +56,6 @@ if [ $# -eq 0 ]
 then 
     USAGE
 fi
-PACKAGE_CKECK(){
-       if [ $# -eq 0 ]
-        then 
-            echo -e "The package installations are$Y SUCCESSFULLY$N done"
-        else
-            echo -e "The package installation are$Y FAILURE$N"
-        fi
-}
 
 # sh 15-loops.sh git mysql nginx
 
@@ -75,11 +67,10 @@ do
         echo -e "$package is not installed,$Y going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
-        
+    
     else
        echo -e "$package is aleady $R installed..nothing to do $N"
-       
+      
     fi
         
 done
-    PACKAGE_CKECK 
