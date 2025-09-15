@@ -49,6 +49,7 @@ USAGE() {
     exit 1
 }
 
+
 CHECK_ROOT
 
 if [ $# -eq 0 ]
@@ -56,11 +57,12 @@ then
     USAGE
 fi
 
-SUCCES_FULL(){
+PACKAGES_SUCCESS(){
     if [ $# -ne 0 ]
+    then
     echo -e "$Y All Packages are SUCCESSFULLY installed $N"
     else
-    echo -e "Install Failure"
+    echo -e "$R Packages Installation Failure $N"
     fi
 }
 # sh 15-loops.sh git mysql nginx
@@ -73,7 +75,7 @@ do
         echo -e "$package is not installed,$Y going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
-        SUCCES_FULL
+        PACKAGES_SUCCESS
     else
         echo -e "$package is aleady $R installed..nothing to do $N"
     fi
