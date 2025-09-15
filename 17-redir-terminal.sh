@@ -56,6 +56,11 @@ then
     USAGE
 fi
 
+SUCCES_FULL(){
+    if [ $# -ne 0 ]
+    echo -e "$Y All Packages are SUCCESSFULLY installed $N"
+    fi
+}
 # sh 15-loops.sh git mysql nginx
 
 for package in $@ # $@ refers to all arguments passed to it
@@ -63,10 +68,11 @@ do
     dnf list installed $package &>>$LOG_FILE
     if [ $? -ne 0 ]
     then 
-        echo -e "$package is not installed,$G going to install it....$N"
+        echo -e "$package is not installed,$Y going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
     else
         echo -e "$package is aleady $R installed..nothing to do $N"
     fi
+    SUCCES_FULL
 done
