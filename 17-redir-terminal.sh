@@ -9,7 +9,7 @@ mkdir -p $LOGS_FOLDER
 
 USERID=$(id -u)
 R="\e[31m" # color red
-G="\e[32m" # color green
+G="\e[32m" # color green 
 N="\e[0m"  # color normal
 Y="\e[33m" # clor yellow
 
@@ -48,15 +48,28 @@ then
 fi
 
 # sh 15-loops.sh git mysql nginx
+# for package in $@ # $@ refers to all arguments passed to it
+# do
+#     dnf list installed $package | tee -a $LOG_FILE
+#     if [ $? -ne 0 ]
+#     then 
+#         echo "$package is not installed, goint to install it...."
+#         dnf install $package -y | tee -a $LOG_FILE
+#         VALIDATE $? "installing $package"
+#     else
+#         echo -e "$package is aleady $Y installed..nothing to do $N"
+#     fi
+# done
+
 for package in $@ # $@ refers to all arguments passed to it
 do
     dnf list installed $package | tee -a $LOG_FILE
     if [ $? -ne 0 ]
     then 
-        echo "$package is not installed, goint to install it...."
+        echo "$package is not installed, going to install it...."
         dnf install $package -y | tee -a $LOG_FILE
         VALIDATE $? "installing $package"
     else
-        echo -e "$package is aleady $Y installed..nothing to do $N"
+        echo -e "$package is aleady $R installed..nothing to do $N"
     fi
 done
