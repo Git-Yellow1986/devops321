@@ -67,7 +67,7 @@ do
         echo -e "$package is not installed,$Y going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
-         if [ $package -ne 0 ]
+        if [ $package -ne 0 ]
         then 
             echo "$package is done"
         else
