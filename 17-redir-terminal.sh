@@ -57,15 +57,7 @@ then
     USAGE
 fi
 
-PACKAGES_SUCCESS(){
-    if [ $# -eq 0 ]
-    then
-    echo -e "$Y All package are SUCCESSFULLY installed $N"
-    else
-    echo -e "$R  Packages Installation Failure $N"
-    exit 1
-    fi
-}
+
 # sh 15-loops.sh git mysql nginx
 
 for package in $@ # $@ refers to all arguments passed to it
@@ -78,7 +70,6 @@ do
         VALIDATE $? "installing $package"
     else
        echo -e "$package is aleady $R installed..nothing to do $N"
-                PACKAGES_SUCCESS
 
     fi
         
