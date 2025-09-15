@@ -75,11 +75,11 @@ do
         echo -e "$package is not installed,$Y going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
-        PACKAGE_CKECK 
+        
     else
        echo -e "$package is aleady $R installed..nothing to do $N"
        
     fi
-        
+        PACKAGE_CKECK 
 
 done
