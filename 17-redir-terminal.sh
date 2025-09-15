@@ -58,12 +58,12 @@ then
 fi
 
 PACKAGES_SUCCESS(){
-    if [ $# -ne 0 ]
+    if [ $# -eq 0 ]
     then
+    echo -e "$Y $2 are SUCCESSFULLY installed $N"
+    else
     echo -e "$R $1 Packages Installation Failure $N"
     exit 1
-     else
-     echo -e "$Y $2 are SUCCESSFULLY installed $N"
     fi
 }
 # sh 15-loops.sh git mysql nginx
