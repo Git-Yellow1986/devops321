@@ -37,6 +37,7 @@ echo "script started excuting at: $(date)" | tee -a $LOG_FILE # when it was star
 
 USAGE() {
     echo -e "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
+    exit 1
 }
 
 CHECK_ROOT
