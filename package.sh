@@ -2,6 +2,9 @@
 
 USERID=$(id -u)
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 CHECK_ROOT() {
 
     if [ $USERID -ne 0 ]
@@ -13,10 +16,10 @@ CHECK_ROOT() {
 VALIDATE() {
 if [ $1 -ne 0 ]
     then 
-        echo "$2 is ....$2 Failed"
+        echo "$2 is ....$R Failed $N"
         exit 1
     else
-        echo "$2 is ....$2 Success"
+        echo "$2 is ....$G Success $N"
     fi
 }
 
