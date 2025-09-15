@@ -57,7 +57,6 @@ then
     USAGE
 fi
 
-
 # sh 15-loops.sh git mysql nginx
 
 for package in $@ # $@ refers to all arguments passed to it
@@ -70,7 +69,12 @@ do
         VALIDATE $? "installing $package"
     else
        echo -e "$package is aleady $R installed..nothing to do $N"
-
+        if [ $package -ne 0 ]
+        then 
+            echo "$package is done"
+        else
+            echo "$package is not done"
+        fi
     fi
         
 
