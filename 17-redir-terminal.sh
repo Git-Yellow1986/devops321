@@ -63,7 +63,7 @@ do
     dnf list installed $package &>>$LOG_FILE
     if [ $? -ne 0 ]
     then 
-        echo "$package is not installed,$G going to install it....$N"
+        echo -e "$package is not installed,$G going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
     else
