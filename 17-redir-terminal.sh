@@ -80,6 +80,6 @@ do
        echo -e "$package is aleady $R installed..nothing to do $N"
        
     fi
-        PACKAGE_CKECK 
-
+        
 done
+    PACKAGE_CKECK 
