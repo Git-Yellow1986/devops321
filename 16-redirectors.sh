@@ -21,9 +21,6 @@ CHECK_ROOT(){
     fi
 }
 
-USAGE() {
-    echo -e "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
-}
 
 VALIDATE() {
     if [ $1 -ne 0 ]
@@ -37,7 +34,12 @@ VALIDATE() {
 
 echo "script started excuting at: $(date)" &>>$LOG_FILE # when it was started script to reference
 
+USAGE() {
+    echo -e "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
+}
+
 CHECK_ROOT
+
 if [ $# -ne 0 ]
 then 
     USAGE

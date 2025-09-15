@@ -53,7 +53,7 @@ do
     if [ $? -ne 0 ]
     then 
         echo "$package is not installed, goint to install it...."
-        dnf install $package -y #| tee -a $LOG_FILE
+        dnf install $package -y | tee -a $LOG_FILE
         VALIDATE $? "installing $package"
     else
         echo -e "$package is aleady $R installed..nothing to do $N"
