@@ -22,7 +22,7 @@ CHECK_ROOT(){
 }
 
 USAGE() {
-    echo "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
+    echo -e "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
 }
 
 VALIDATE() {
