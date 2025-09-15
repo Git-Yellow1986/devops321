@@ -67,14 +67,15 @@ do
         echo -e "$package is not installed,$Y going to install it....$N"
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
-    else
-       echo -e "$package is aleady $R installed..nothing to do $N"
-        if [ $package -ne 0 ]
+         if [ $package -ne 0 ]
         then 
             echo "$package is done"
         else
             echo "$package is not done"
         fi
+    else
+       echo -e "$package is aleady $R installed..nothing to do $N"
+       
     fi
         
 
