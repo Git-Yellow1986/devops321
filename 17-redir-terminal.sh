@@ -4,8 +4,8 @@ LOGS_FOLDER="/var/log/shell-script"
 #echo redirector.sh | cut -d "." -f1 --> on command prompt
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE="$LOGS_FOLDER/SCRIPT_NAME-$TIME_STAMP.log"
-mkdir -p LOGS_FOLDER
+LOG_FILE="$LOGS_FOLDER/$CRIPT_NAME-$TIME_STAMP.log"
+mkdir -p $LOGS_FOLDER
 
 USERID=$(id -u)
 R="\e[31m" # color red
@@ -22,7 +22,7 @@ CHECK_ROOT(){
 }
 
 USAGE() {
-    echo "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
+    echo -e "$R USAGE ::$N sudo sh 16-redirector.sh package1,package2....."
 }
 
 VALIDATE() {
