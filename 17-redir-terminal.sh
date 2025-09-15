@@ -59,9 +59,9 @@ fi
 PACKAGE_CKECK(){
        if [ $# -eq 0 ]
         then 
-            echo "$package is done"
+            echo "The packages installation $Y SUCCESSFULLY $N done"
         else
-            echo "$package is not done"
+            echo "The packages installation $Y FAILURE $N"
         fi
 }
 
