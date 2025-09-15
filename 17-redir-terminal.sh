@@ -38,7 +38,7 @@ VALIDATE() {
 echo "script started excuting at: $(date)" | tee -a $LOG_FILE # when it was started script to reference
 
 CHECK_ROOT
-if [ $# -ne 0 ]
+if [ $# -eg 0 ]
 then 
     USAGE
 fi
