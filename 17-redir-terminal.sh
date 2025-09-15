@@ -57,6 +57,6 @@ do
         dnf install $package -y | tee -a $LOG_FILE
         VALIDATE $? "installing $package"
     else
-        echo -e "$package is aleady $R installed..nothing to do $N"
+        echo -e "$package is aleady $Y installed..nothing to do $N"
     fi
 done
