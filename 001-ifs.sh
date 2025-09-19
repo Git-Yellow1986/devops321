@@ -27,4 +27,4 @@ for color in $colors
 do
   echo "Color: $color"
 done
-IFS=$OLDIFS
+#IFS=$OLDIFS
