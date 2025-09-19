@@ -58,6 +58,6 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +4)
     while IFS= read -r line
     do
      echo "Line: $line"
-    done <<<$FILES
+    done <<<FILES
 
 
