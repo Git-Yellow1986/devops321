@@ -37,4 +37,4 @@ then
     echo "Directory is exist......."
 else
     echo "directory does not exist...."
-done
+fi
