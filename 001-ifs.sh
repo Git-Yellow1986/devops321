@@ -41,7 +41,7 @@ Y="\e[33m" # clor yellow
 
 if [ -d $success ]
 then 
-    echo "$SOURCE_DIR  $G Exists.......$N"
+    echo -e "$SOURCE_DIR  $G Exists.......$N"
 else
-    echo "$SOURCE_DIR $R does not Exist....$N"
+    echo -e "$SOURCE_DIR $R does not Exist....$N"
 fi
