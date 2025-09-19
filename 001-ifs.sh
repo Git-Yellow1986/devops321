@@ -50,7 +50,7 @@ fi
 
 # FILES=$(find /home/ec2-user/logs -name "*.log" -mtime +4)
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +4)
+FILES=$(find  /home/ec2-user/logs -name "*.log" -mtime +4)
 
     echo "Files: $FILES"
 
