@@ -8,10 +8,21 @@
 # echo "word:$word"
 # do
 
-text="Rajesh,Ramesh,Mahesh,Suresh"
-IFS=","
+# ------------------
+# text="Rajesh,Ramesh,Mahesh,Suresh"
+# IFS=","
 
-for names in $text
-do
-    echo "Names $names"
+# for names in $text
+# do
+#     echo "Names $names"
+# done
+
+# -----------------------
+
+color="white|green|bule|red|yellow"
+
+IFS="|"
+for colors in $clor
+do 
+    echo "colors $colors"
 done
