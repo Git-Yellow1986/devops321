@@ -30,11 +30,18 @@
 # done
 # IFS=$OLDIFS
 
+
 SOURCE_DIR=\home\ec2-user\logs
+
+R="\e[31m" # color red
+G="\e[32m" # color green
+N="\e[0m"  # color normal
+Y="\e[33m" # clor yellow
+
 
 if [ -d $success ]
 then 
-    echo "$SOURCE_DIR is exist......."
+    echo "$SOURCE_DIR  $G Exists.......$N"
 else
-    echo "$SOURCE_DIR does not exist...."
+    echo "$SOURCE_DIR $R does not Exist....$N"
 fi
