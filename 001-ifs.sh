@@ -39,9 +39,17 @@ N="\e[0m"  # color normal
 Y="\e[33m" # clor yellow
 
 
-if [ -d $success ]
+if [ -d $SOURCE_DIR ]
 then 
     echo -e "$SOURCE_DIR  $G Exists.......$N"
 else
     echo -e "$SOURCE_DIR $R does not Exist....$N"
 fi
+
+# Actual path 'find /home/ec2-user/logs -name "*.log" -mtime +4
+
+# FILES=$(find /home/ec2-user/logs -name "*.log" -mtime +4)
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +4)
+    echo "Files $FILES"
+    
