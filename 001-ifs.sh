@@ -21,8 +21,11 @@
 
 color="white|green|bule|red|yellow"
 
+OLDIFS=$IFS
+
 IFS="|"
 for colors in $clor
 do 
     echo "colors $colors"
 done
+IFS=$OLDIFS
