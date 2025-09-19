@@ -34,7 +34,7 @@ SOURCE_DIR=\home\ec2-user\logs
 
 if [ -d $success ]
 then 
-    echo "Directory is exist......."
+    echo "$SOURCE_DIR is exist......."
 else
-    echo "directory does not exist...."
+    echo "$SOURCE_DIR does not exist...."
 fi
