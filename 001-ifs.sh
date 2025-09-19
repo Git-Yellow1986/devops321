@@ -20,12 +20,11 @@
 # -----------------------
 
 
+colors="red|green|blue|yellow"
 OLDIFS=$IFS
-color="white|green|bule|red|yellow"
-
 IFS="|"
-for colors in $clor
-do 
-    echo "colors $colors"
+for color in $colors
+do
+  echo "Color: $color"
 done
 IFS=$OLDIFS
