@@ -19,9 +19,9 @@
 
 # -----------------------
 
-color="white|green|bule|red|yellow"
 
 OLDIFS=$IFS
+color="white|green|bule|red|yellow"
 
 IFS="|"
 for colors in $clor
