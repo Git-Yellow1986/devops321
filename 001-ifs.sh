@@ -44,6 +44,7 @@ then
     echo -e "$SOURCE_DIR  $G Exists.......$N"
 else
     echo -e "$SOURCE_DIR $R does not Exist....$N"
+    exit 1
 fi
 
 # Actual path 'find /home/ec2-user/logs -name "*.log" -mtime +4
