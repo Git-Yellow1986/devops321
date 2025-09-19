@@ -19,12 +19,22 @@
 
 # -----------------------
 
+# this not run
 
-colors="red|green|blue|yellow"
-OLDIFS=$IFS
-IFS="|"
-for color in $colors
-do
-  echo "Color: $color"
+# colors="red|green|blue|yellow"
+# OLDIFS=$IFS
+# IFS="|"
+# for color in $colors
+# do
+#   echo "Color: $color"
+# done
+# IFS=$OLDIFS
+
+SOURCE_DIR=\home\ec2-user\logs
+
+if [ -d $success ]
+then 
+    echo "Directory is exist......."
+else
+    echo "directory does not exist...."
 done
-#IFS=$OLDIFS
