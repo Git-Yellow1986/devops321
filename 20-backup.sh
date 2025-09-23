@@ -21,12 +21,6 @@ then
     exit 1
 fi
 
-if [ $# -lt 2 ]
-    USAGE
-    exit 1
-fi
-
-
 if [ ! -d $SOURCE_DIR ]
 then
     echo "$SOURCE_DIR does not exist...Please check"
